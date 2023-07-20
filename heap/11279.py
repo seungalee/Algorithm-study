@@ -1,19 +1,21 @@
-#최대 힙 배열
-heap = []
+#heapq 사용
+import sys
+from heapq import heappush, heappop
 
-#입력받은 수 삽입
-def InsertNum(number):
-    heap.append(number)
-    i=len(heap)-1
-    while i>1:
-        if heap[i]>heap[i//2]:
-            heap[i], heap[i//2] = heap[i//2], heap[i]
-        else: 
-            break
-    
-def RemoveMax():
-    i=len(heap)-1
-    del heap[0]
-    if i>0:
-        heap[0], heap[-1] = heap[-1], heap[0]
-        if heap[0]>heap[]
+#heapq: 최소 힙 구현한 라이브러리
+
+heap = []
+nums = []
+
+N = int(input())
+for i in range(N):
+    nums = [input() for _ in range(N)]
+
+for num in nums:
+    if(num>0):
+        heappush(heap, (-num, num))
+    else:
+        if len(heap)==0:
+            print(0)
+        else:
+            print(heappop(heap))

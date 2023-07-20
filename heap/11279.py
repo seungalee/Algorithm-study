@@ -8,8 +8,7 @@ heap = []
 nums = []
 
 N = int(input())
-for i in range(N):
-    nums = [input() for _ in range(N)]
+nums = [int(input()) for _ in range(N)]
 
 for num in nums:
     if(num>0):
@@ -18,4 +17,5 @@ for num in nums:
         if len(heap)==0:
             print(0)
         else:
-            print(heappop(heap))
+            maxnum = heappop(heap)
+            print(maxnum[1])

@@ -21,7 +21,7 @@ def solution(jobs):
                 break
             if len(jobs)==0:
                 break
-        #여기서 에러발생: 2차원 배열의 특정 행에서 최소값 어떻게 찾지?
+        
         readyDiskWorkTime = []
         for i in readyDisk:
             readyDiskWorkTime.append(i[1])
@@ -33,6 +33,3 @@ def solution(jobs):
             heappush(jobs, i)
     answer = totaltime/lenofJobs
     return answer
-
-jobs = [[0, 3], [1, 9], [2, 6]]
-solution(jobs)

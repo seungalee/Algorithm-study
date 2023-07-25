@@ -3,14 +3,17 @@
 def solution(s):
     answer = True
     
-    stack = [0]
+    stack = []
     for i in s:
         if i=="(":
             stack.append(1)
         elif i==")":
-            stack.pop()
-    
-    if stack==[0]:
+            try:
+                stack.pop()
+            except IndexError:
+                return False
+
+    if stack==[]:
         return True
     else:
         return False

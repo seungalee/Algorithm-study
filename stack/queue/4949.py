@@ -1,7 +1,10 @@
-input = input()
-input = input.replace("\n", "")
-sentences = input.split('.')
+import sys
+input = sys.stdin.readline
 
+while True:
+    sentence=input()
+    if sentence ==".":
+        break
 
 yesorno = []
 

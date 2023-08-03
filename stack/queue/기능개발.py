@@ -4,32 +4,23 @@ speeds = [1, 30, 5]
 
 def solution(progresses, speeds):
     answer = []
+    time = 0
+    count = 0
 
-    while True:
-        funcNum=0
-        nowFuncProg = progresses.pop(0)
-        nowFuncSpeed = speeds.pop(0)
-        funcNum+=1
-        #첫번째 작업 끝나는 일수 계산, 그 뒤 작업에 다 더해준다
-        nowFuncDate = (100-nowFuncProg)//nowFuncSpeed
-        if (100-nowFuncProg)%nowFuncSpeed!=0:
-            nowFuncDate+=1
-
-        for i in range(len(progresses)):
-            progresses[i-1] = progresses[i-1]+speeds[i-1]*nowFuncDate
-        
-        #100이 넘은 것들 pop
-        if progresses[0]:
-            while progresses[0]>=100:
-                progresses.pop(0)
-                funcNum+=1
-                if progresses == []:
-                    break
-        
-        answer.append(funcNum)
-        if progresses==[]:
-            break
-
+    while len(progresses)>0:
+        if progresses[0]+time*speeds[0]>=100:
+            progresses.pop(0)
+            speeds.pop(0)
+            count+=1
+        else:
+            if count!=0:
+                answer.append(count)
+                count = 0
+            else:
+                time+=1
+    #그냥 종료하면 마지막 count가 배열에 들어가지 않으므로 반복문을 빠져나와 한번 더 append
+    answer.append(count)
     return answer
 
-solution(progress, speeds)
+print(solution(progress, speeds))
+

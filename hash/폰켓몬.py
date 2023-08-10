@@ -15,3 +15,5 @@ def solution(nums):
     else:
         answer = ponkeNum
     return answer
+
+##인터넷 본 더 쉬운 풀이: set 함수 활용하기! 중복을 제거해준다

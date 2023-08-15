@@ -1,12 +1,7 @@
 import sys
-input = sys.stdin.readline
-
-while True:
-    sentence=input()
-    if sentence ==".":
-        break
 
 yesorno = []
+input = sys.stdin.readlines()
 
 def YesorNo(sentence):
     parenthesis = []
@@ -36,16 +31,15 @@ def YesorNo(sentence):
     else:
         return False
 
-
-
-for sentence in sentences:
-    if sentence == "":
+for line in input:
+    line = line.rstrip()
+    if line == ".":
         break
-    i = YesorNo(sentence)
-    yesorno.append(i)
+    returned = YesorNo(line)
+    yesorno.append(returned)
 
-for result in yesorno:
-    if result == True:
+for boolean in yesorno:
+    if boolean == True:
         print("yes")
-    elif result == False:
+    elif boolean == False:
         print("no")

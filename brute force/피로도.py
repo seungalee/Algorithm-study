@@ -1,5 +1,5 @@
 from itertools import permutations
-#인터넷 참고: permutatio 통한 순열 활용
+#인터넷 참고: permutations 통한 순열 활용
 
 def solution(k, dungeons):
     answer = -1

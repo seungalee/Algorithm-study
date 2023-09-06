@@ -3,20 +3,17 @@ def solution(people, limit):
     people.sort()
     i=0
     j = len(people)-1
-    while people:
+    #remove와 같은 함수 사용 최소화, index 포인터를 변화시키는 것으로 해결
+    #종료조건 주의; 등호 주의하자
+    while i<=j:
         now_person = people[i]
-        if j==0:
-            people.remove(now_person)
+        if now_person+people[j]<=limit:
+            j-=1
+            i+=1
             answer+=1
-            j = len(people)-1
-        elif now_person+people[j]<=limit:
-            people.remove(people[j])
-            people.remove(now_person)
-            answer+=1
-            j = len(people)-1
         else:
             j-=1
-        
+            answer+=1
         
     return answer
 

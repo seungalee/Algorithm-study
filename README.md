@@ -17,3 +17,5 @@
 #### 5주차: Brute Force
 
 #### 6주차: Greedy
+
+#### 7주차: DFS, BFS

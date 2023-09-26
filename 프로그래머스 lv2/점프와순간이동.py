@@ -1,38 +1,25 @@
 #정확성 검사 다 맞았는데 효율성 검사 다 틀림
+#bfs로 푸는 건줄 알았는데 아니었다.. 
+#1. 이진수에서 1의 갯수 세기/ 2. 그리디
 
-from collections import deque
+#1
+def solution(n):
+    n_bin = bin(n)
+    ans = n_bin[2:].count('1')
+    return ans
 
+#2
 def solution(n):
     ans = 0
-    ans+=1
-    arr = [0]*(n+1)
-    visit = deque()
-    visit.append(1)
-    arr[1] = 1
-    while visit:
-        breakToggle = False
-        node = visit.popleft()
-        if node == n:
-            ans = arr[node]
+    while True:
+        if n==1:
+            ans+=1
             break
-        new_node = node*2
-        if new_node == n:
-            ans = arr[node]
+        if n==0:
             break
-        while new_node+1<=n:
-            if arr[new_node+1]==0:
-                if new_node +1 == n:
-                    ans = arr[node]+1
-                    breakToggle = True
-                    break
-                visit.append(new_node+1)
-                arr[new_node+1]=arr[node]+1
-            new_node*=2
-            if new_node == n:
-                ans = arr[node]
-                breakToggle = True
-                break
-        if breakToggle == True:
-            break
-
+        if n %2 ==1:
+            ans+=1
+            n = (n-1)//2
+        else:
+            n = n//2
     return ans

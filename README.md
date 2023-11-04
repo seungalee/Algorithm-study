@@ -6,16 +6,11 @@
 🔗https://school.programmers.co.kr/learn/challenges?tab=algorithm_practice_kit  
 📚https://www.notion.so/7-5167363b9cf94dd4af77ff162dd2b6bf?pvs=4
 
-#### 1주차: Heap
-
-#### 2주차: Stack, Queue
-
-#### 3주차: Sorting
-
-#### 4주차: Hash
-
-#### 5주차: Brute Force
-
-#### 6주차: Greedy
-
-#### 7주차: DFS, BFS
+1주차: Heap
+2주차: Stack, Queue
+3주차: Sorting
+4주차: Hash
+5주차: Brute Force
+6주차: Greedy
+7주차: DFS, BFS
+8주차: DP

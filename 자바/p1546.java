@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class p1546 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
+        int N = Integer.parseInt(sc.nextLine());
         String testScores = sc.nextLine();
         int[] scoresArr = Arrays.stream(testScores.split(" ")).mapToInt(Integer::parseInt).toArray();
 

@@ -5,6 +5,27 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "p10986",
+      "request": "launch",
+      "mainClass": "자바.p10986",
+      "projectName": "Algorithm-study_f3e488b5"
+    },
+    {
+      "type": "java",
+      "name": "p11660",
+      "request": "launch",
+      "mainClass": "자바.p11660",
+      "projectName": "Algorithm-study_f3e488b5"
+    },
+    {
+      "type": "java",
+      "name": "p11659",
+      "request": "launch",
+      "mainClass": "자바.p11659",
+      "projectName": "Algorithm-study_f3e488b5"
+    },
+    {
       "name": "Python: Current File",
       "type": "python",
       "request": "launch",
